@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Архив всех статей</title>
+		<link rel="stylesheet" href="{{STATIC_URL}}article.css">
+	</head>
+	<body class="archive">
+		<div class="header">
+			<img src="static/cnimok.png"/>
+			<a href="http://127.0.0.1:8000/reg/">Зарегистрироваться</a>
+			<a href="http://127.0.0.1:8000/auth/">Войти</a>
+		</div>
+		<div class="archive">
+		{% for post in posts %}
+			<div class="one-post">
+				<h2 class="post-title"><a href="article/{{post.id}}">{{ post.title }}</a></h2>
+				<div class="article-info">
+					<div class="article-author">{{ post.author.username }}</div>
+					<div class="article-created-date">{{ post.created_date }}</div>
+				</div>
+				<p class="article-text">{{ post.get_excerpt }}</p>
+			</div>
+		{% endfor %}
+		</div>
+	</body>
+</html>

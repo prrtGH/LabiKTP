@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Архив всех статей</title>
+		<link rel="stylesheet" href="{{STATIC_URL}}article.css">
+	</head>
+	<body class="archive">
+		<div class="header">
+			<img src="static/cnimok1.png"/>
+			<div class="parallax">
+				<div class="text-area">
+					<p class="service-title">Коллективный блог</p>
+					<a href="http://127.0.0.1:8000/reg/" class="register-link">Зарегистрироваться</a>
+					<a href="http://127.0.0.1:8000/auth/" class="register-link">Войти</a>
+				</div>
+				<img class="ad"src="{{STATIC_URL}}cnimok.png">
+				<img class="ad1"src="{{STATIC_URL}}cnimok.png">
+			</div>
+		</div>
+		<div class="archive">
+		{% for post in posts %}
+			<div class="one-post">
+				<div class="post-title"><a href="article/{{post.id}}">{{ post.title }}</a>
+				</div>
+					<div class="fold-button">Свернуть</div>
+				<div class="article-info">
+					<div class="article-author">{{ post.author.username }}</div>
+					<div class="article-created-date">{{ post.created_date }}</div>
+				</div>
+				<p class="article-text">{{ post.get_excerpt }}</p>
+				<div class="one-post-shadow"></div>
+			</div>
+		{% endfor %}
+		</div>
+		<script src="{{ STATIC_URL }}js/jquery.js"></script>
+		<script src="{{ STATIC_URL }}js/helloworld.js"></script>
+		<script src="{{ STATIC_URL }}js/fold-post.js"></script>
+		<script src="{{ STATIC_URL }}js/highlight-post.js"></script>
+		<script src="{{ STATIC_URL }}js/size.js"></script>
+		<script src="{{ STATIC_URL }}js/highlight-post.js"></script>
+		<script src="{{ STATIC_URL }}js/parallax.js"></script>
+	</body>
+</html>

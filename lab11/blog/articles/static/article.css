@@ -1,0 +1,132 @@
+body {
+	background: #220042;
+	font-family: Tahoma, Arial, sans-serif;
+	color: #ffffff;
+}
+.article-author {
+	width: 50%;
+	float: left;
+	font-size: 20px;
+	font-style: italic;
+}
+.article-created-date {
+	text-align: right;
+	font-style: italic;
+	padding: 5px;
+	font-size: 30px;
+}
+p {
+	font-size: 25px;
+}
+.header a {
+	color: #ffffff;
+	font-size: 30px;
+	float: right;
+	padding: 30px;
+}
+.article .header img{
+	display: block;
+	width: 318px;
+}
+.archive .header img {
+	display: block;
+	width: 318px;
+	height: 193px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.archive .archive {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.archive .post-title a {
+	color: #ffffff;
+	font-size: 70px;
+}
+
+.article .archive .post-title {
+	font-size: 120px;
+}
+.article-author {
+	width: 50%;
+	float: left;
+	font-size: 30px;
+}
+.article-created-date {
+	text-align: right;
+	font-style: italic;
+	padding: 5px;
+}
+.article .article-text{
+	font-size: 40px;
+}
+.article .header a {
+	
+	color: #ffffff;
+	font-size: 20px;
+	float: left;
+	padding: 10px;
+}
+
+.fold-button
+{
+	text-decoration:underline;
+	font-size: 20;
+}
+.one-post.folded .article-info, .one-post.folded .article-text{ 
+/* данный стиль применится только для элементов класса 
+.article-author, у которых родитель с классом one-post 
+имеет также класс folded */ 
+display: none; 
+} 
+
+.one-post-shadow {
+position: absolute; 
+top: 0; 
+left: 0; 
+height: 100%; 
+width: 100%; 
+background: black; 
+z-index: -1; /* отодвигает элемент на задний план */ 
+opacity: 0; 
+}
+
+.parallax {
+margin-top: 50px;
+margin-bottom: 50px;
+height: 230px;
+position: relative;
+background: #A767D5;
+}
+.text-area {
+	float:right;
+	color:#5CCCCC;
+}
+.service-title{
+	font-size: 70px;
+	padding:5px;
+}
+
+.text-area a{
+	font-size: 25px;
+	padding-right: 100px;
+	color: #5CCCCC;
+}
+.parallax img {
+/* здесь находятся общие для всех картинок стили */
+height: 123px;
+width: 123px;
+top: 0;
+}
+.ad1 {
+position:absolute;
+padding-top: 100px; /* эта картинка слегка смещена вправо и вниз */
+padding-left: 80px; /* за счет левой и верхней границ */
+z-index: 1;
+}
+.ad {
+position:absolute;
+padding-left: 160px;
+z-index: 2; /* эта картинка на заднем плане, у неё меньший z-index */
+}
